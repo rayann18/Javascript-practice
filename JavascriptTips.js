@@ -1,4 +1,4 @@
- /*
+ 
  // using optional chaining(?.) while working with nested objects to avoid errors
  const user = {
   username: 'alice',
@@ -9,7 +9,7 @@ location:{
 }
  }
  console.log(user.location?.country) // output is undefined
-*/
+
  // use destructuring to extract values
  const user1  = { username: 'ryan',
   password: '******',
@@ -79,7 +79,7 @@ three : 3
  const character = Object.assign(name, details)
  console.log(character)
 
- //object.freeze
+ //object.freeze prevents properties from being added or removed from an object
  const user2= {
   username : 'russia1',
   password: 'putin@russia'
@@ -90,7 +90,7 @@ three : 3
  newUser.active = true
  console.log(newUser)  // expected output { username: 'russia1', password: 'putin@russia' }
 
- // object.seal
+ // object.seal  allows modification of existing properties
  const user3  = {
   username: 'giggs',
   password: 'rayann18'
