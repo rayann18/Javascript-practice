@@ -42,7 +42,10 @@ console.log(copied)
 const a1 = [7,8,9]
 const a2 = [9,8,7]
 const a1a2 = [...a1, 6, ...a2]
-console.log(a1a2)
+console.log(a1a2) //  [   7, 8, 9, 6,  9, 8, 7]
+
+
+
 
 // function arguments
 //spread operator can be used to passs array of values as individual arguments to a function
@@ -51,16 +54,16 @@ function exampleFunction(arg1,arg2,arg3){
 console.log(arg1,arg2,arg3)
 }
 
-exampleFunction(...args)
+exampleFunction(...args) // [ 1, 2, 3 ]
 
 // rest parameter
 function exampleFunction(...args){
   console.log(args)
 }
-exampleFunction(1,2,3)
+exampleFunction(1,2,3) //[ 1, 2, 3 ]
 
 // merging arrays and objects
 const obje = {a:1, b:2}
 const arr = [9,8,7]
 const joined = {...obje, ...arr}
-console.log(joined)
+console.log(joined) //  { '0': 9, '1': 8, '2': 7, a: 1, b: 2 }
