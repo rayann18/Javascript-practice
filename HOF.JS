@@ -22,3 +22,17 @@ function sendVerification(pizzaAvailable,billIspaid){ // send verification is ho
 // Arrays
 const newAarray = [1,2,3].map(x => x*2)
 console.log(newAarray)
+
+//callbacks
+function placeOrder(order,callback){
+  console.log(`order placed for : ${order}. please wait for the buzzer.`)
+
+  setTimeout( () => {
+    console.log('buzzer : your order is ready!');
+    callback(order) // callback executed on order complete
+  }, 3000)
+}
+function collectOrder(order){
+  console.log(`collecting the ${order}.enjoy your meal`)
+}
+placeOrder('pizza',collectOrder) //collectorder is a callback
