@@ -1,1 +1,71 @@
-<script src="DOM.js"></script>
+ 
+<!--<script src="ClassList.js"></script>--> 
+<h1 id="title">Hello</h1>
+<button  class= "btn  btn-primary mt-3" id="my-btn"> Click Me </button>
+
+
+<style>
+.btn{ 
+  background-color: rgb(10, 10, 170);
+  border: 3px solid wheat;
+  color: white;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+  .not-visible{
+    display: none;
+  }
+  body{
+    cursor: pointer;
+  }
+</style>
+
+
+
+
+<script>
+
+const btn = document.getElementById('my-btn');
+const title = document.getElementById('title');
+
+btn.addEventListener('click', () =>{  // adds on the button click the not-visible class to the classlist making the title disappear
+  title.classList.add('not-visible') //add()
+})
+console.log(btn.classList); // dom tokenlist(3)
+
+
+
+const btn1 = document.getElementById('my-btn');
+const title1 = document.getElementById('title');
+btn.addEventListener('click', () => {
+  title.classList.remove('text-primary') // removes on the button click the text-primary class, changing the color from blue to black
+})
+
+
+const btn2 = document.getElementById('my-btn');
+const title2 = document.getElementById('title');
+
+btn.addEventListener('click', () => {
+  title.classList.toggle('not-visible') // toggles the not visible class on title element every time button gets clicked
+})
+
+btn.addEventListener('click', () => {
+  if(!title.classList.contains('text-primary')){
+    title.classList.add('not-visible') //if title doesnt contain in its classlist the text-primary class, only then on the button click add to the title the not visible class making in dissapear
+  }
+})
+
+btn.addEventListener('click', () => {
+  title.classList.replace('btn-primary', 'btn-secondary') // changes button color from blue to grey
+})
+
+btn.addEventListener('click', () => {
+  title.textContent = btn.classList.length // on button click, display in the title, the number of classes that the button contains
+})
+
+btn.addEventListener('click', () => {
+  title.textContent = btn.classList.value // on button click, it displays in the title the classes as a string that the btn contains
+})
+</script>

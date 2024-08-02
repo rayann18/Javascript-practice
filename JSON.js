@@ -67,3 +67,8 @@ const obje = {a:1, b:2}
 const arr = [9,8,7]
 const joined = {...obje, ...arr}
 console.log(joined) //  { '0': 9, '1': 8, '2': 7, a: 1, b: 2 }
+
+// map and set
+//creating a map with key-value
+const numberMap = new Map().set('one', 1)
+console.log(Map())
